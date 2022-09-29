@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="images/calculadora.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body class="bg-light bg-gradient">
+    <header class="text-center p-2">
+        <h1 id="titulo" class="fw-semibold fs-1">Calculadora Pitágoras</h1>
+        <p id="descricao" class="fw-normal fs-5">
+            Por favor, preencha os campos abaixo com as informações necessárias:
+        </p>
+    </header>
+
+    <main>
+        <form id="calculadora" class="container p-5 shadow rounded" onsubmit="return false">
+            <div class="input-group mb-3">
+                <label for="cateto-oposto" class="form-label">Digite o valor do cateto oposto: </label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="cateto-oposto" onfocusin="destacarLados(true, 'oposto')"
+                        onfocusout="destacarLados(false, 'oposto')" aria-describedby="basic-addon3">
+                </div>
+                <div class="orm-label mb-0" id="mensagem-cateto-oposto">
+                    <p>Preencha o campo, por favor!</p>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <label for="cateto-adjacente" class="form-label">Digite o valor do cateto adjacente: </label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="cateto-adjacente"
+                        onfocusin="destacarLados(true, 'adjacente')" onfocusout="destacarLados(false, 'adjacente')"
+                        aria-describedby="basic-addon3">
+                </div>
+                <label class="form-label mb-0" id="mensagem-cateto-adjacente">
+                    Preencha o campo, por favor!
+                </label>
+            </div>
+
+            <div class="input-group mb-3" id="div-hipotenusa">
+                <label for="hipotenusa" class="form-label">Hipotenusa: </label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" value="" id="hipotenusa" aria-describedby="basic-addon3"
+                        onfocusin="destacarLados(true, 'hipotenusa')" onfocusout="destacarLados(false, 'hipotenusa')"
+                        readonly>
+                </div>
+            </div>
+            <div class="text-center">
+                <button onclick="validaCampos()" type="submit" class="btn btn-outline-primary m-2">Calcular</button>
+                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+            </div>
+            </div>
+    </main>
+    <div class="w-100 position-relative height">
+        <div class="oposto border border-dark"></div>
+        <div class="adjacente border border-dark"></div>
+        <div class="hipotenusa border border-dark"></div>
+    </div>
+</body>
+
+<footer>
+    <a href="https://br.linkedin.com/in/raissa-de-kassia" target="_blank"><i class="bi bi-linkedin"></i></a>
+    <a href="https://github.com/Railssa1/calculadora-pitagoras" target="_blank"><i class="bi bi-github"></i></a>
+    <p>2022 © Raissa Moraes</p>
+    </div>
+</footer>
+</html>
