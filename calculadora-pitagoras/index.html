@@ -27,7 +27,7 @@
             <div class="input-group mb-3">
                 <label for="cateto-oposto" class="form-label">Digite o valor do cateto oposto: </label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="cateto-oposto" onfocusin="destacarLados(true, 'oposto')"
+                    <input type="text" class="form-control input-numerico" id="cateto-oposto" onfocusin="destacarLados(true, 'oposto')"
                         onfocusout="destacarLados(false, 'oposto')" aria-describedby="basic-addon3">
                 </div>
                 <div class="orm-label mb-0" id="mensagem-cateto-oposto">
@@ -38,7 +38,7 @@
             <div class="input-group mb-3">
                 <label for="cateto-adjacente" class="form-label">Digite o valor do cateto adjacente: </label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="cateto-adjacente"
+                    <input type="text" class="form-control input-numerico" id="cateto-adjacente"
                         onfocusin="destacarLados(true, 'adjacente')" onfocusout="destacarLados(false, 'adjacente')"
                         aria-describedby="basic-addon3">
                 </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="text-center">
                 <button onclick="validaCampos()" type="submit" class="btn btn-outline-primary m-2">Calcular</button>
-                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+                <button type="reset" class="btn btn-outline-secondary" onclick="toogleHipotenusa('none')">Limpar</button>
             </div>
             </div>
     </main>
